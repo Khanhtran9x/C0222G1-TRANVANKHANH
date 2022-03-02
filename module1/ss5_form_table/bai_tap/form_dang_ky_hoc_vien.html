@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form đăng kí học viên</title>
+    <style>
+        tr{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get" action="https://www.google.com.vn/search">
+        <table style="background-color: bisque;">
+            <tr style="background-color: aquamarine; color: blue;height: 30px;">
+                <th colspan="2" style="text-align: left;">ĐĂNG KÍ HỌC VIÊN</th>
+            </tr>
+            <tr>
+                <td>Họ và tên</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td style="color: black;"><label><input type="radio">Nam<label> <label><input type="radio">Nữ</label></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="textfield" style="height: 70px;"></td>
+            </tr>
+            <tr>
+                <td>Lớp</td>
+                <td>
+                    <select name="classlist" id="classlist">
+                        <option value="pickclass">--Chọn lớp--</option>
+                        <option value="java">Java</option>
+                        <option value="html">Html</option>
+                        <option value="css">Css</option>
+                        <option value="php">Php</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" name="Register" value="Đăng ký">
+                    <input type="submit" name="Retype" value="Nhập lại">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
