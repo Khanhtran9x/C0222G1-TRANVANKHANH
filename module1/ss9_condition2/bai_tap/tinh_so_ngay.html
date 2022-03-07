@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số ngày</title>
+</head>
+
+<body>
+    <input type="text" id="month1">
+    <button id="calculateDay1" onclick="calculateMonth1();">Tính số ngày</button>
+    <p id="result1">Kết quả</p>
+    <p>Và</p>
+    <input type="text" id="month2">
+    <button id="calculateDay2" onclick="calculateMonth2();">Tính số ngày</button>
+    <p id="result2">Kết quả</p>
+    <script>
+        function calculateMonth1() {
+            var month1 = parseInt(document.getElementById("month1").value);
+            switch (month1) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("result1").innerHTML = "tháng " + month1 + " có 31 ngày";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("result1").innerHTML = "tháng " + month1 + " có 30 ngày";
+                    break;
+                case 2:
+                    document.getElementById("result1").innerHTML = "tháng 2 có 28 hoặc 29 ngày";
+                    break;
+            }
+        }
+
+        function calculateMonth2() {
+            var month2 = parseInt(document.getElementById("month2").value);
+            switch (month2) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("result2").innerHTML = "tháng " + month2 + " có 31 ngày";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("result2").innerHTML = "tháng " + month2 + " có 30 ngày";
+                    break;
+                case 2:
+                    document.getElementById("result2").innerHTML = "tháng 2 có 28 hoặc 29 ngày";
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
