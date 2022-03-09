@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Bài 1: Điểm trung bình các môn</title>
-    </head>
-    <body>
-        <script>
-            inputPhysics = prompt('Nhập vào điểm trung bình môn Vật Lý');
-            inputChemistry = prompt('Nhập vào điểm trung bình môn hóa học');
-            inputBiology = prompt('Nhập vào điểm trung bình môn sinh học');
-            let physics = parseFloat(inputPhysics);
-            let chemistry = parseFloat(inputChemistry);
-            let biology = parseFloat(inputBiology);
-            let average = (physics + chemistry + biology)/3;
-            document.write('Điểm trung bình của các môn là: ' + average);
-        </script>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Điểm trung bình các môn</title>
+</head>
+
+<body>
+    <script>
+        let inputPhysics = prompt('Nhập vào điểm trung bình môn Vật Lý');
+        let inputChemistry = prompt('Nhập vào điểm trung bình môn hóa học');
+        let inputBiology = prompt('Nhập vào điểm trung bình môn sinh học');
+        let physics = parseFloat(inputPhysics);
+        let chemistry = parseFloat(inputChemistry);
+        let biology = parseFloat(inputBiology);
+        let average = (physics + chemistry + biology) / 3;
+        document.write('Điểm trung bình của các môn là: ' + average);
+    </script>
+</body>
+
 </html>

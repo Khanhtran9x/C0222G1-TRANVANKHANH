@@ -9,8 +9,17 @@
 <body>
     <Script>
         let inputElec = parseInt(prompt('Nhập vào số điện'));
-        let bill = inputElec * 2000;
-        alert('Giá điện phải trả là: ' + bill + " VND");
+        let bill = 0;
+        if (inputElec < 10) {
+            bill = inputElec * 1000
+            alert('Giá điện phải trả là: ' + bill + " VND");
+        } else if (inputElec < 50) {
+            bill = inputElec * 5000
+            alert('Giá điện phải trả là: ' + bill + " VND");
+        } else {
+            bill = inputElec * 10000
+            alert('Giá điện phải trả là: ' + bill + " VND");
+        }
     </Script>
 </body>
 
