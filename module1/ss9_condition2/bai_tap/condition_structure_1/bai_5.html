@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <Script>
+        let testScore = parseFloat(prompt('Nhập vào điểm bài kiểm tra'));
+        let middleSemesterScore = parseFloat(prompt('Nhập vào điểm giữa kì'));
+        let endSemesterScore = parseFloat(prompt('Nhập vào điểm cuối kì'));
+        let average = (testScore + middleSemesterScore + endSemesterScore) / 3;
+        if (average >= 8.5) {
+            alert('Đạt học sinh giỏi');
+        } else if (average >= 7) {
+            alert('Đạt học sinh khá');
+        } else if (average >= 5) {
+            alert('Đạt học sinh trung bình');
+        } else {
+            alert('Đạt học sinh kém');
+        }
+    </Script>
+</body>
+
+</html>

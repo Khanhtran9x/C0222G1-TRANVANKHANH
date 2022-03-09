@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+
+<body>
+    <Script>
+        let input = parseInt(prompt('Nhập vào thu nhập của bạn'));
+        let tax = 0;
+        if (input > 20000000) {
+            tax = input * 20 / 100;
+        } else if (input > 11000000) {
+            tax = input * 10 / 100;
+        } else {
+            tax = input * 5 / 100;
+        }
+        alert('Thuế thu nhập cá nhân phải đóng là: ' + tax + ' VND');
+    </Script>
+</body>
+
+</html>

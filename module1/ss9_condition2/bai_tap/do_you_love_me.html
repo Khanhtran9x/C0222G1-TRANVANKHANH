@@ -2,19 +2,27 @@
 <html>
 
 <head>
+    <meta>
     <title>Do you love me?</title>
 </head>
 
 <body>
-    <div>
-        <h2>Do you love me?</h2>
-        <button id="yes" value="yes" onclick="click();">Yes</button>
-        <button id="no" value="no">No</button>
+    <div id="content">
+        <h2 id="title">Do you love me?</h2>
+        <button type="button" id="yes" onclick="clickYes();">Yes</button>
+        <button type="button" id="no" class="no" onmouseover="mouseHover();" style="position: absolute;">No</button>
     </div>
-
     <script>
-        function click() {
-            alert('<3');
+        function mouseHover() {
+            let a = document.getElementById('no');
+            let x = Math.floor(Math.random() * 500) + 1;
+            let y = Math.floor(Math.random() * 500) + 1;
+            a.style.left = x + "px";
+            a.style.top = y + "px";
+        }
+
+        function clickYes() {
+            alert("<3");
         }
     </script>
 </body>

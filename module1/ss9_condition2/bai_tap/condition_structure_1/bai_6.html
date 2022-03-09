@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+
+<body>
+    <Script>
+        let doanhSo = parseFloat(prompt('Nhập vào doanh số bán hàng'));
+        let hoaHong = '';
+        if (doanhSo >= 1000) {
+            hoaHong = '10%';
+        } else if (doanhSo >= 700) {
+            hoaHong = '7%';
+        } else if (doanhSo >= 500) {
+            hoaHong = '5%';
+        } else if (doanhSo >= 100) {
+            hoaHong = doanhSo * 1 / 100;
+        } else {
+            hoaHong = '1%';
+        }
+        alert('Phần trăm hoa hồng nhận được là ' + hoaHong);
+    </Script>
+</body>
+
+</html>

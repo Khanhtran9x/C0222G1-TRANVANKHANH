@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+
+<body>
+    <Script>
+        let a = parseInt(prompt('Nhập vào độ dài cạnh a'));
+        let b = parseInt(prompt('Nhập vào độ dài cạnh b'));
+        let c = parseInt(prompt('Nhập vào độ dài cạnh b'));
+        if (a > 0 && b > 0 && c > 0) {
+            if ((a + b) > c) {
+                if ((b + c) > a) {
+                    if ((a + c) > b) {
+                        alert('3 số vừa nhập vào là 3 cạnh của một tam giác');
+                    } else {
+                        alert('3 số vừa nhập vào không phải là 3 cạnh của một tam giác');
+                    }
+                } else {
+                    alert('3 số vừa nhập vào không phải là 3 cạnh của một tam giác');
+                }
+            } else {
+                alert('3 số vừa nhập vào không phải là 3 cạnh của một tam giác');
+            }
+        } else {
+            alert('3 số vừa nhập vào không phải là 3 cạnh của một tam giác');
+        }
+    </Script>
+</body>
+
+</html>
