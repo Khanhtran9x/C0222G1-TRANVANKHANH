@@ -44,7 +44,7 @@ img5Array[2].src = "img/panda_swap_part5x1.jpg";
 function changeImage1() {
     let i = Math.floor(Math.random() * 3);
     document.getElementById("img1").src = img1Array[i].src;
-    check();
+    check(i);
 }
 
 function changeImage2() {
