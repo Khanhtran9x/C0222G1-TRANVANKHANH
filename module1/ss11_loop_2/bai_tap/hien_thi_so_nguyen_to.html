@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị số nguyên tố</title>
+</head>
+
+<body>
+    <script>
+        let numbers = parseInt(prompt('Nhập số lượng số nguyên tố cần in ra'));
+        let n = 2;
+        let count = 0;
+        while (count < numbers) {
+            let a = 0;
+            for (j = 2; j < n; j++) {
+                if (n % j == 0) {
+                    a++;
+                }
+            }
+            if (a == 0) {
+                document.write(n + "<br>");
+                count++;
+            }
+            n++;
+        }
+    </script>
+</body>
+
+</html>

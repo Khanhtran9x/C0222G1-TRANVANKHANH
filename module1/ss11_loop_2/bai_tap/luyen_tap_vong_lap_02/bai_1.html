@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập vòng lặp 2 - Bài 1</title>
+</head>
+
+<body>
+    <script>
+        let fiboArray = new Array();
+        fiboArray.push(0);
+        fiboArray.push(1);
+        fiboArray.push(2);
+        let count = fiboArray.length;
+        while (count <= 30) {
+            let a = 0;
+            let i = fiboArray.length - 1;
+            let j = fiboArray.length - 2;
+            a = fiboArray[i] + fiboArray[j];
+            fiboArray.push(a);
+            count++;
+        }
+        document.write(fiboArray);
+    </script>
+</body>
+
+</html>

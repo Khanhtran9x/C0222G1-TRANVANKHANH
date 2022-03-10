@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập vòng lặp 2 - Bài 8</title>
+</head>
+
+<body>
+    <button onclick="playGame();">Chơi</button>
+    <script>
+        function playGame() {
+            let firstValue = parseInt(prompt('Nhập vào giá trị đầu tiên của khoảng'));
+            let secondValue = parseInt(prompt('Nhập vào giá trị thứ hai của khoảng'));
+            let range = secondValue - firstValue;
+            let randomValue = Math.floor(Math.random() * range) + firstValue;
+            let guess = parseInt(prompt('Nhập vào giá trị muốn đoán'));
+            let count = 1;
+
+            while (count < 3) {
+                if (guess == randomValue) {
+                    alert('Xin chúc mừng bạn đã chiến thắng');
+                    break;
+                }
+                if (guess < randomValue) {
+                    alert('Số bạn vừa đoán nhỏ hơn đáp án đúng, xin mời nhập lại');
+                    guess = parseInt(prompt('Nhập vào lại giá trị muốn đoán'));
+                    count++;
+                } else {
+                    alert('Số bạn vừa đoán lớn hơn đáp án đúng, xin mời nhập lại');
+                    guess = parseInt(prompt('Nhập vào lại giá trị muốn đoán'));
+                    count++;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
