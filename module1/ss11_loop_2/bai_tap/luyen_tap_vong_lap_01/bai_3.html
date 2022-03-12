@@ -10,13 +10,13 @@
 
 <body>
     <script>
-        let fiboArray = new Array(0, 1, 2);
+        let fiboArray = new Array(0, 1);
         let count = fiboArray.length;
         while (count <= 20) {
             let a = 0;
             let i = fiboArray.length - 1;
             let j = fiboArray.length - 2;
-            a = fiboArray[2] + fiboArray[j];
+            a = fiboArray[i] + fiboArray[j];
             fiboArray.push(a);
             count++;
         }

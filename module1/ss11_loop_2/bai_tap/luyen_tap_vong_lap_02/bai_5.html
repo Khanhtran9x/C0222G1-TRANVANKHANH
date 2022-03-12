@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <Script>
+        let value = parseFloat(prompt('Nhập vào số tiền cần tính lãi ban đầu'));
+        let month = parseFloat(prompt('Nhập vào số tháng cho vay cần tính lãi'));
+        let interest = 6 / 100;
+        let futureInterestValue = value * Math.pow((1 + interest), month) - value;
+        alert('Số tiền lãi cộng dồn sau ' + month + " tháng là: " + futureInterestValue);
+    </Script>
+</body>
+
+</html>

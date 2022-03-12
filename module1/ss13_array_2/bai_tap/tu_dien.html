@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ Điển</title>
+</head>
+
+<body>
+    <input type="text" id="inputText">
+    <button onclick="search();">Tìm kiếm</button>
+    <p id="result">Đáp án</p>
+    <script>
+        function search() {
+            let engArray = ['Hello', "Good", "Great", "Bad"];
+            let vietArray = ['Xin chào', 'Tốt', 'Tuyệt vời', 'Tệ'];
+            let word = document.getElementById('inputText').value;
+
+            for (let i = 0; i < engArray.length; i++) {
+                if (word == engArray[i]) {
+                    document.getElementById('result').innerHTML = 'Đáp án: ' + vietArray[i];
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
