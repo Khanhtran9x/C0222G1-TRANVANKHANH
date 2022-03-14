@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+
+<body>
+    <script>
+        let array = new Array(5);
+        for (let i = 0; i < array.length; i++) {
+            array[i] = prompt('Nhập vào giá trị thứ ' + i + " của mảng")
+        }
+        alert('Mảng vừa nhập vào là: ' + array);
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == '-') {
+                array[i] = '_';
+            }
+        }
+        alert('Mảng sau khi được điều chỉnh là: ' + array);
+    </script>
+</body>
+
+</html>

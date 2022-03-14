@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+
+<body>
+    <script>
+        let array = [1, 4, 5, 6, 99, 88, 54, 63, 3, 4, 65, 11, 10, 43, 3, 43, 33, 21, 1, 20];
+        let max = array[0];
+        let total = 0;
+        let average = 0;
+        for (i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+            total += array[i];
+        }
+        average = total / 20;
+        let position = array.indexOf(max);
+        alert('Mảng ' + array + ' có giá trị lớn nhất là ' + max + ' , trung bình của các phần tử trong mảng là: ' + average);
+    </script>
+</body>
+
+</html>

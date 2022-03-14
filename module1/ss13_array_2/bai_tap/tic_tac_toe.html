@@ -6,10 +6,231 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic tac toe</title>
+    <style>
+        table {
+            padding: 0px;
+            height: 200px;
+            width: 200px;
+            margin: auto;
+            background-color: #e8e9ee;
+            border-collapse: collapse;
+            box-shadow: rgba(238, 236, 236, 0.19) 0px 10px 30px, rgba(0, 0, 0, 0.23)0px 8px 6px;
+        }
+        
+        td,
+        th {
+            border: 1px solid #0f0e0e;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .btn {
+            padding: 0;
+            border: none;
+            background: none;
+            outline: none;
+            height: 30px;
+            width: 30px;
+        }
+        
+        .btn:after {
+            border: none;
+        }
+    </style>
 </head>
 
 <body>
+    <h2 style="text-align: center;">TIC TAC TOE</h2>
+    <p style="text-align: center;">Click vào các ô trống để chơi!!</p>
+    <table>
+
+        <tr>
+            <th><button class="btn" id="btn1" onclick="play1();"></button></th>
+            <th><button class="btn" id="btn2" onclick="play2();"></button></th>
+            <th><button class="btn" id="btn3" onclick="play3();"></button></th>
+
+        </tr>
+        <tr>
+            <th><button class="btn" id="btn4" onclick="play4();"></button></th>
+            <th><button class="btn" id="btn5" onclick="play5();"></button></th>
+            <th><button class="btn" id="btn6" onclick="play6();"></button></th>
+        </tr>
+        <tr>
+            <th><button class="btn" id="btn7" onclick="play7();"></button></th>
+            <th><button class="btn" id="btn8" onclick="play8();"></button></th>
+            <th><button class="btn" id="btn9" onclick="play9();"></button></th>
+
+
+
+    </table>
     <script>
+        let flag = 0;
+
+        function check() {
+            let btn1 = document.getElementById('btn1').innerText;
+            let btn2 = document.getElementById('btn2').innerText;
+            let btn3 = document.getElementById('btn3').innerText;
+            let btn4 = document.getElementById('btn4').innerText;
+            let btn5 = document.getElementById('btn5').innerText;
+            let btn6 = document.getElementById('btn6').innerText;
+            let btn7 = document.getElementById('btn7').innerText;
+            let btn8 = document.getElementById('btn8').innerText;
+            let btn9 = document.getElementById('btn9').innerText;
+            if (btn1 == 'X' && btn2 == 'X' && btn3 == 'X') {
+                alert("Người chơi thứ nhất chiến thắng");
+                document.location.reload();
+            } else if (btn1 == 'X' && btn4 == 'X' && btn7 == 'X') {
+                alert("Người chơi thứ nhất chiến thắng");
+                document.location.reload();
+            } else if (btn1 == 'X' && btn5 == 'X' && btn9 == 'X') {
+                alert("Người chơi thứ nhất chiến thắng");
+                document.location.reload();
+            } else if (btn3 == 'X' && btn6 == 'X' && btn9 == 'X') {
+                alert("Người chơi thứ nhất chiến thắng");
+                document.location.reload();
+            } else if (btn3 == 'X' && btn5 == 'X' && btn7 == 'X') {
+                alert("Người chơi thứ nhất chiến thắng");
+                document.location.reload();
+            } else if (btn7 == 'X' && btn8 == 'X' && btn9 == 'X') {
+                alert("Người chơi thứ nhất chiến thắng");
+                document.location.reload();
+            } else if (btn2 == 'X' && btn5 == 'X' && btn8 == 'X') {
+                alert("Người chơi thứ nhất chiến thắng");
+                document.location.reload();
+            } else if (btn4 == 'X' && btn5 == 'X' && btn6 == 'X') {
+                alert("Người chơi thứ nhất chiến thắng");
+                document.location.reload();
+            }
+
+            if (btn1 == 'O' && btn2 == 'O' && btn3 == 'O') {
+                alert("Người chơi thứ hai chiến thắng");
+                document.location.reload();
+            } else if (btn1 == 'O' && btn4 == 'O' && btn7 == 'O') {
+                alert("Người chơi thứ hai chiến thắng");
+                document.location.reload();
+            } else if (btn1 == 'O' && btn5 == 'O' && btn9 == 'O') {
+                alert("Người chơi thứ hai chiến thắng");
+                document.location.reload();
+            } else if (btn3 == 'O' && btn6 == 'O' && btn9 == 'O') {
+                alert("Người chơi thứ hai chiến thắng");
+                document.location.reload();
+            } else if (btn3 == 'O' && btn5 == 'O' && btn7 == 'O') {
+                alert("Người chơi thứ hai chiến thắng");
+                document.location.reload();
+            } else if (btn7 == 'O' && btn8 == 'O' && btn9 == 'O') {
+                alert("Người chơi thứ hai chiến thắng");
+                document.location.reload();
+            } else if (btn2 == 'O' && btn5 == 'O' && btn8 == 'O') {
+                alert("Người chơi thứ hai chiến thắng");
+                document.location.reload();
+            } else if (btn4 == 'O' && btn5 == 'O' && btn6 == 'O') {
+                alert("Người chơi thứ hai chiến thắng");
+                document.location.reload();
+            }
+
+
+        }
+
+        function play1() {
+            if (flag == 0) {
+                document.getElementById('btn1').innerText = 'X';
+                flag = 1;
+            } else {
+                document.getElementById('btn1').innerText = 'O';
+                flag = 0;
+            }
+            check();
+
+
+        }
+
+        function play2() {
+            if (flag == 0) {
+                document.getElementById('btn2').innerText = 'X';
+                flag = 1;
+            } else {
+                document.getElementById('btn2').innerText = 'O';
+                flag = 0;
+            }
+            check();
+        }
+
+        function play3() {
+            if (flag == 0) {
+                document.getElementById('btn3').innerText = 'X';
+                flag = 1;
+            } else {
+                document.getElementById('btn3').innerText = 'O';
+                flag = 0;
+            }
+            check();
+        }
+
+        function play4() {
+            if (flag == 0) {
+                document.getElementById('btn4').innerText = 'X';
+                flag = 1;
+            } else {
+                document.getElementById('btn4').innerText = 'O';
+                flag = 0;
+            }
+            check();
+        }
+
+        function play5() {
+            if (flag == 0) {
+                document.getElementById('btn5').innerText = 'X';
+                flag = 1;
+            } else {
+                document.getElementById('btn5').innerText = 'O';
+                flag = 0;
+            }
+            check();
+        }
+
+        function play6() {
+            if (flag == 0) {
+                document.getElementById('btn6').innerText = 'X';
+                flag = 1;
+            } else {
+                document.getElementById('btn6').innerText = 'O';
+                flag = 0;
+            }
+            check();
+        }
+
+        function play7() {
+            if (flag == 0) {
+                document.getElementById('btn7').innerText = 'X';
+                flag = 1;
+            } else {
+                document.getElementById('btn7').innerText = 'O';
+                flag = 0;
+            }
+            check();
+        }
+
+        function play8() {
+            if (flag == 0) {
+                document.getElementById('btn8').innerText = 'X';
+                flag = 1;
+            } else {
+                document.getElementById('btn8').innerText = 'O';
+                flag = 0;
+            }
+            check();
+        }
+
+        function play9() {
+            if (flag == 0) {
+                document.getElementById('btn9').innerText = 'X';
+                flag = 1;
+            } else {
+                document.getElementById('btn9').innerText = 'O';
+                flag = 0;
+            }
+            check();
+        }
     </script>
 </body>
 

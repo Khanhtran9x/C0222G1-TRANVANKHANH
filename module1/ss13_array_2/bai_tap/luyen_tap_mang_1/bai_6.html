@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+
+<body>
+    <script>
+        let array = [-1, 4, 5, 6, 99, 88, 54, 63, 3, -4, 65, 11, 10, -43, 3, 43, 33, 21, 1, 20];
+        let count = 0;
+        let V = parseInt(prompt('Input value to check if it is in the array!!'));
+        for (i = 0; i < array.length; i++) {
+            if (array[i] == V) {
+                alert('V is in the array');
+                break;
+            } else {
+                count++;
+            }
+        }
+        if (count == 20) {
+            alert('V is not in the array');
+        }
+    </script>
+</body>
+
+</html>
