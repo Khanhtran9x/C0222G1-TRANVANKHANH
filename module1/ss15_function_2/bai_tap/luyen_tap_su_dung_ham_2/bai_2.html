@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+
+<body>
+    <script>
+        function area(radius) {
+            let result;
+            result = Math.PI * Math.pow(radius, 2);
+            return result;
+        }
+
+        function perimeter(radius) {
+            let result;
+            result = Math.PI * radius * 2;
+            return result;
+        }
+        let input = parseFloat(prompt('Nhập vào bán kính của hình tròn'));
+        let resultArea = area(input);
+        let resultPerimeter = perimeter(input);
+        alert('Diện tích của hình tròn là: ' + resultArea);
+        alert('Chu vi của hình tròn là: ' + resultPerimeter);
+    </script>
+</body>
+
+</html>

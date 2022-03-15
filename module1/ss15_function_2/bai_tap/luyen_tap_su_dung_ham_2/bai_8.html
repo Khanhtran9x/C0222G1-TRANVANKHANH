@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+</head>
+
+<body>
+    <script>
+        function swap(arr) {
+            arr.reverse();
+            return arr;
+        }
+        let input = parseInt(prompt('Nhập vào số lượng phần tử trong mảng'));
+        let arr = new Array(input);
+        for (let i = 0; i < input; i++) {
+            arr[i] = parseInt(prompt('Nhập vào giá trị phần tử thứ ' + i));
+        }
+        alert('Mảng vừa nhập vào là: ' + arr);
+        let arr2 = swap(arr);
+        alert('Mảng sau đảo ngược là: ' + arr2);
+    </script>
+</body>
+
+</html>

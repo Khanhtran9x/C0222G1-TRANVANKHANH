@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 9</title>
+</head>
+
+<body>
+    <script>
+        function check(arr, input) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (input == arr[i]) {
+                    count++;
+                }
+            }
+            if (count > 0) {
+                return count;
+            } else {
+                return -1;
+            }
+        }
+
+        let inputArr = prompt('Nhập vào số lượng phần tử trong mảng');
+        let arr = new Array(inputArr);
+        for (let i = 0; i < inputArr; i++) {
+            arr[i] = prompt('Nhập vào giá trị phần tử thứ ' + i);
+        }
+        alert('Mảng vừa nhập vào là: ' + arr);
+        let inputSearch = prompt('Nhập vào kí tự cần kiểm tra');
+        let result = check(arr, inputSearch);
+        alert('Số lần kí tự cần tìm xuất hiện trong mảng là: ' + result);
+    </script>
+</body>
+
+</html>

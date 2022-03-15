@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <script>
+        function check(a, b, c) {
+            if (a < b) {
+                if (a < c) {
+                    return a;
+                } else if (b < c) {
+                    return b;
+                } else {
+                    return c;
+                }
+            } else if (b < c) {
+                return b;
+            } else {
+                return c;
+            }
+        }
+        let a = parseFloat(prompt('Nhập vào kí tự thứ nhất cần kiểm tra'));
+        let b = parseFloat(prompt('Nhập vào kí tự thứ hai cần kiểm tra'));
+        let c = parseFloat(prompt('Nhập vào kí tự thứ ba cần kiểm tra'));
+        let result = check(a, b, c);
+        alert('Số nhỏ nhất là: ' + result);
+    </script>
+</body>
+
+</html>
