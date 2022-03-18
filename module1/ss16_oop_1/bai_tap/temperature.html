@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script !src="">
+    Temperature = function (degree) {
+         this.degree = degree;
+         this.getDegree = function () {
+              return this.degree;
+         }
+         this.setDegree = function (degree) {
+              this.degree = degree;
+         }
+         this.cToF = function () {
+              return degree * 1.8 + 32;
+         }
+         this.cToK = function () {
+             return degree * 273.15;
+         }
+    }
+    let cal = new Temperature(25);
+    alert('Độ F sau khi được chuyển đổi là: ' + cal.cToF() + '. Độ K sau khi được chuyển đổi là: ' + cal.cToK());
+
+</script>
+</body>
+</html>

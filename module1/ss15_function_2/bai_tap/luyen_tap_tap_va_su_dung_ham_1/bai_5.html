@@ -11,7 +11,6 @@
 <body>
     <script>
         function check(arr1, input) {
-            let count = 0;
             let i = -1;
             for (i = 0; i < arr1.length; i++) {
                 if (input == arr1[i]) {
@@ -23,8 +22,7 @@
         let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
         let inputName = prompt('Nhập vào tên idol cần kiểm tra: ');
         let result = check(arr1, inputName);
-        console.log(result);
-        if (result == undefined) {
+        if (result === undefined) {
             alert('Tên idol bạn vừa nhập vào sai rồi!!');
         } else {
             alert('Chòm sao của idol của bạn là: ' + arr2[result])

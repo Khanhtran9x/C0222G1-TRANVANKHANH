@@ -33,12 +33,13 @@
 
 <body>
     <div id="content">
+
     </div>
     <script>
         let arr = ['Sony Xperia', 'Samsung Galaxy', ' Nokia 6'];
 
         function displayProduct(arr) {
-            let sout = "<h3>Add New Product</h3><input id='newproduct' type='text' value='New Product'> <button onclick = 'addNewProduct();'>Add</button> <h3>Display All Product</h3><h4>Product Name</h4>"
+            let sout = "<h3>Add New Product</h3><input style='height: 25px;' id='newproduct' type='text' value='New Product'> <button onclick = 'addNewProduct();'>Add</button><h3>Display All Product</h3><h4>Product Name</h4>"
             sout += "<table  width='300' cellspacing='0' cellpadding='3'>";
             for (i = 0; i < arr.length; i++) {
                 sout += "<tr>"

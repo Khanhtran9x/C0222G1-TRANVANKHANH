@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra tính đối xứng</title>
+</head>
+
+<body>
+    <script>
+        function isPalindrome(str) {
+            if (str.length === 1) {
+                return true;
+            }
+            if (str.length === 2) {
+                return str[0] === str[1];
+            }
+            if (str[0] === str.slice(-1)) {
+                return isPalindrome(str.slice(1, -1));
+
+            } else {
+                return false;
+            }
+        }
+        let input = prompt('Nhập từ cần kiểm tra tính đối xứng');
+        let result = isPalindrome(input);
+        alert(result);
+    </script>
+</body>
+
+</html>

@@ -10,26 +10,15 @@
 
 <body>
     <script>
-        function check(a, b, c) {
-            if (a < b) {
-                if (a < c) {
-                    return a;
-                } else if (b < c) {
-                    return b;
-                } else {
-                    return c;
-                }
-            } else if (b < c) {
-                return b;
-            } else {
-                return c;
-            }
+        function check(number) {
+           if (!isNaN(Number(number))){
+               return true;
+           } else {
+               return false;
+           }
         }
-        let a = parseFloat(prompt('Nhập vào kí tự thứ nhất cần kiểm tra'));
-        let b = parseFloat(prompt('Nhập vào kí tự thứ hai cần kiểm tra'));
-        let c = parseFloat(prompt('Nhập vào kí tự thứ ba cần kiểm tra'));
-        let result = check(a, b, c);
-        alert('Số nhỏ nhất là: ' + result);
+        let input = prompt('Nhập vào kí tự thứ nhất cần kiểm tra');
+        alert(check(input));
     </script>
 </body>
 

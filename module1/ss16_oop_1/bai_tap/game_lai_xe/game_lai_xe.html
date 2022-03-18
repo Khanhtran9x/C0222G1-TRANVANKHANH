@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game lái xe</title>
+    <link rel = "icon" type = "image/png" href = "image/icon.png">
+</head>
+<body>
+<h3 id="score" style = 'color: #0e4bbb'>0 GOLD</h3>
+<canvas id="myCanvas" width=600px" height="650px" style="border:1px solid black; background: gray"></canvas>
+
+
+<script !src="">
+    let baseImage = new Image();
+    let roadImage = new Image();
+    let policeImage = new Image();
+    let x = 300;
+    let y = 600;
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    let moveInterval;
+    let count = 0;
+
+    function drawRoad() {
+        roadImage.src = 'image/road.png';
+        roadImage.onload = function () {
+            ctx.drawImage(roadImage, 0, 0);
+            ctx.fillStyle = '#f60606';
+            ctx.fillRect(50, 50, 100, 50);
+            ctx.fillRect(400, 150, 100, 50);
+            ctx.fillRect(150, 350, 100, 50);
+
+        }
+    }
+
+    function showPolice() {
+        policeImage.src = 'image/police.png';
+        policeImage.onload = function () {
+            ctx.drawImage(policeImage, 400, 400);
+        }
+    }
+
+
+    function drawCar() {
+        ctx.clearRect(0, 0, 600, 650);
+        baseImage.src = 'image/car.png';
+        baseImage.onload = function () {
+            ctx.drawImage(baseImage, x, y);
+        }
+        y = y - 5;
+        if (y < -100) {
+            y = 600;
+        }
+    }
+
+
+    function crash() {
+        if (x < 250 && x > 150 && y < 400 && y > 350) {
+            return true;
+        } else if (x < 500 && x > 350 && y < 200 && y > 150) {
+            return true;
+        } else if (x < 150 && x > 50 && y < 100 && y > 50) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function update() {
+        let checkCrash = crash();
+        if (checkCrash === true) {
+            clearInterval(moveInterval);
+            showPolice();
+            document.getElementById('score').innerHTML = 'GAME OVER';
+        } else if (y === 350) {
+            count++;
+            document.getElementById('score').innerHTML = count + ' GOLD';
+        } else if (y === 150) {
+            count++;
+            document.getElementById('score').innerHTML = count + ' GOLD';
+        } else if (y === 50) {
+            count++;
+            document.getElementById('score').innerHTML = count + ' GOLD';
+        }
+    }
+
+
+    window.onload = function () {
+        window.addEventListener("keydown", keypress, false);
+        moveInterval = setInterval(function () {
+            drawRoad();
+            drawCar();
+            update();
+        }, 100);
+
+    };
+
+
+    function keypress(event) {
+        console.log(event.keyCode);
+        if (event.keyCode == 37) {
+            x -= 10;
+        }
+        if (event.keyCode == 39) {
+            x += 10;
+        }
+        if (event.keyCode == 38) {
+            y -= 10;
+        }
+        if (event.keyCode == 40) {
+            y += 10;
+        }
+    }
+
+</script>
+</body>
+</html>

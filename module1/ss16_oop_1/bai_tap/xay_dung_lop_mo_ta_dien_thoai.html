@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<script !src="">
+    Mobile = function (energy) {
+        this.energy = energy;
+        this.setEnergy = function (energy) {
+            this.energy = energy;
+        }
+        this.getEnergy = function () {
+            return this.energy;
+        }
+        this.saveTypingMessage = function (typingMessage) {
+            this.setEnergy(this.energy - 1);
+            return typingMessage;
+        }
+        this.saveMessage = function (message) {
+            this.setEnergy(this.energy - 1);
+            return message;
+        }
+        this.saveSentMessage = function (sentMessage) {
+            this.setEnergy(this.energy - 1);
+            return sentMessage;
+        }
+        this.isMobileOn = function (value) {
+            this.setEnergy(this.energy - 1);
+            return value;
+        }
+        this.turnOnOff = function (value) {
+            this.setEnergy(this.energy - 1);
+            return value;
+        }
+        this.charge = function (value) {
+            this.setEnergy(this.energy - 1);
+            return value;
+        }
+        this.typeMessage = function (message) {
+            this.setEnergy(this.energy - 1);
+            return message;
+        }
+        this.receiveMessage = function (message) {
+            this.setEnergy(this.energy - 1);
+            return message;
+        }
+        this.sendMessage = function (message) {
+            this.setEnergy(this.energy - 1);
+            return message;
+        }
+        this.readMessage = function (message) {
+            this.setEnergy(this.energy - 1);
+            return message;
+        }
+        this.readSentMessage = function (message) {
+            this.setEnergy(this.energy - 1);
+            return message;
+        }
+
+    }
+    let nokia = new Mobile(100);
+    let iphone = new Mobile(100);
+    let message = prompt('Type the message that you want nokia to send!!');
+    let nokiaMessage = nokia.typeMessage(message);
+    let nokiaSend = nokia.sendMessage(nokiaMessage);
+    let iphoneReceive = iphone.receiveMessage(nokiaSend);
+    let iphoneRead = iphone.readMessage(iphoneReceive);
+    alert('Read the message that is just sent to iphone: ' + iphoneRead);
+    alert('Remaining Nokia Energy is:  ' + nokia.getEnergy() + ' %');
+    alert('Remaining Iphone Energy is:  ' + iphone.getEnergy() + ' %');
+
+
+</script>
+</body>
+</html>
