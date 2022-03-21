@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script !src="">
+    function calculate(salary) {
+        let tax;
+        if (salary >= 15){
+            tax = 20/100 * salary;
+            salary = salary -tax;
+            alert('Số tiền thuế phải đóng là ' + tax + 'tr, số tiền lương thực nhận là ' + salary + 'tr');
+        } else if (salary >= 7) {
+            tax = 10/100 * salary;
+            alert('Số tiền thuế phải đóng là ' + tax + 'tr, số tiền lương thực nhận là ' + salary + 'tr');
+
+        } else {
+            tax = 5/100 * salary;
+            alert('Số tiền thuế phải đóng là ' + tax + 'tr, số tiền lương thực nhận là ' + salary + 'tr');
+
+        }
+    }
+    let inputSalary = parseFloat(prompt('Nhập lương nhân viên cần tính thuế'));
+    calculate(inputSalary);
+</script>
+</body>
+</html>

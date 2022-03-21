@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điều khiển tivi</title>
+</head>
+<body>
+<script !src="">
+    class Remote{
+        constructor(code) {
+            this.code = code;
+            this.volume = 30;
+        }
+        channeling(tivi, channel){
+            tivi.channel = channel;
+            console.log('Tivi đã được chuyển đến kênh: ' + tivi.channel);
+        }
+        voluming(tivi, range){
+            tivi.volume = tivi.volume + range;
+            console.log('Âm lượng đã được điều chỉnh thành: ' + tivi.volume);
+        }
+        turnOff(tivi){
+            tivi.turnOff();
+            console('Tivi đã tắt');
+        }
+    }
+    class Tivi {
+        constructor(channel, volume, status) {
+            this.channel = channel;
+            this.volume = volume;
+            this.status = status;
+        }
+        channeling (channel){
+            this.channel = channel;
+            console.log('Tivi đã được chuyển đến kênh: '+ this.channel);
+        }
+        describe(describe){
+            return describe;
+        }
+        voluming(range){
+            this.volume = this.volume + 2;
+        }
+        turnOn(){
+            this.status = 'on';
+            console.log('Tivi đã được bật');
+        }
+        turnOff(){
+            this.status = 'off';
+        }
+    }
+    let tv = new Tivi('vtv3', 30, 'off');
+    let remote = new Remote(100);
+    tv.turnOn();
+    tv.channeling(7);
+    remote.channeling(tv, 3);
+    remote.voluming(tv, 2);
+</script>
+</body>
+</html>

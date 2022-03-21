@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+
+<body>
+<script>
+    let a = [];
+    let b = [];
+    let c = [];
+    let aLength = parseInt(prompt('Nhập vào số phần tử của mảng a'));
+    for (let i = 0; i < aLength; i++) {
+        let input = parseInt(prompt('Nhập vào giá trị phần tử của mảng a'));
+        a.push(input);
+    }
+    let bLength = parseInt(prompt('Nhập vào số phần tử của mảng b'));
+    for (let i = 0; i < bLength; i++) {
+        let input = parseInt(prompt('Nhập vào giá trị phần tử của mảng b'));
+        b.push(input);
+    }
+    for (let i = 0; i < b.length; i++) {
+        let count = 0;
+        for (let j = 0; j < a.length; j++) {
+            if (b[i] !== a[j]) {
+                count++;
+            }
+        }
+        if (count === a.length) {
+            c.push(b[i]);
+        }
+    }
+    c.sort();
+    alert(c);
+</script>
+</body>
+
+</html>

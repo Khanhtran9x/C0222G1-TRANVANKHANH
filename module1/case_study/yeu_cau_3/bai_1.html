@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <script>
+        function prefix() {
+            let a = [];
+            let inputLength = parseInt(prompt('Nhập vào số phần tử của mảng ban đầu'));
+            for (let i = 0; i < inputLength; i++) {
+                let inputA = parseInt(prompt('Nhập vào giá trị của chuỗi số nguyên'));
+                a.push(inputA);
+            }
+            console.log(a);
+            let b = [];
+            let sum = 0;
+            for (let i = 0; i < a.length; i++) {
+                sum = sum + a[i];
+                b.push(sum);
+            }
+            alert(b);
+        }
+        prefix();
+    </script>
+</body>
+
+</html>

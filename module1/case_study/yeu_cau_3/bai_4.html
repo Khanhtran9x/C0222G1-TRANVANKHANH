@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script !src="">
+    let input = prompt('Nhập vào số cần chuyển đổi thành chữ');
+    let len = input.length;
+    let arr = input.split('');
+    let newArr = [];
+    console.log(arr);
+    for (let i = 0; i < arr.length; i++) {
+        switch (arr[i]) {
+            case '1':
+                newArr.push('Một');
+                break;
+            case '2':
+                newArr.push('Hai');
+                break;
+            case '3':
+                newArr.push('Ba');
+                break;
+            case '4':
+                newArr.push('Bốn');
+                break;
+            case '5':
+                newArr.push('Năm');
+                break;
+            case '6':
+                newArr.push('Sáu');
+                break;
+            case '7':
+                newArr.push('Bảy');
+                break;
+            case '8':
+                newArr.push('Tám');
+                break;
+            case '9':
+                newArr.push('Chín');
+                break;
+            case '0':
+                newArr.push('Không');
+                break;
+        }
+    }
+    alert(newArr);
+
+
+</script>
+</body>
+</html>

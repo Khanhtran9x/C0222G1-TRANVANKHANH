@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    function drawRec(x, y){
+        let sout;
+        sout = "<table>";
+        sout += "<tr>";
+        for (i = 0; i <= x -1; i++) {
+            sout += "<td>*</td>";
+        }
+        sout += "</tr>";
+
+        for (i = 0; i < y-2; i++) {
+            sout += "<tr><td>*</td>";
+            for (j = 0; j < x-2; j++) {
+                sout += "<td></td>";
+            }
+            sout += "<td>*</td></tr>";
+        }
+
+        sout += "<tr>";
+        for (i = 0; i <= x -1; i++) {
+            sout += "<td>*</td>";
+        }
+        sout += "</tr>";
+
+        sout = sout + "</table>";
+        document.write(sout);
+    }
+   drawRec(5, 4);
+
+</script>
+</body>
+</html>

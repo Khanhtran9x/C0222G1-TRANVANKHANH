@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script !src="">
+    let input;
+    let quantity;
+    let bill = 0;
+    let totalBill;
+    do {
+        input = parseInt(prompt('Chọn loại thức uống: \n 1.Cafe \n 2.Cam vắt \n 3.Nước ép cà rốt' +
+            '\n 4.Nước ép cà chua \n 5.Nước lọc \n 6.Nước dừa \n 7.Thoát chọn món'));
+
+        switch (input) {
+            case 1:
+                quantity = parseInt(prompt('Giá cafe là 20k, nhập số lương muốn đặt'));
+                bill += quantity * 20;
+                break;
+            case 2:
+                quantity = parseInt(prompt('Giá cam vắt là 25k, nhập số lương muốn đặt'));
+                bill += quantity * 25;
+                break;
+            case 3:
+                quantity = parseInt(prompt('Giá nước ép cà rốt là 30k, nhập số lương muốn đặt'));
+                bill += quantity * 30;
+                break;
+            case 4:
+                quantity = parseInt(prompt('Giá nước ép cà chua là 25k, nhập số lương muốn đặt'));
+                bill += quantity * 25;
+                break;
+            case 5:
+                quantity = parseInt(prompt('Giá nước lọc là 10k, nhập số lương muốn đặt'));
+                bill += quantity * 10;
+                break;
+            case 6:
+                quantity = parseInt(prompt('Giá nước dừa là 20k, nhập số lương muốn đặt'));
+                bill += quantity * 20;
+                break;
+            case 7:
+                break;
+        }
+    } while (input !== 7);
+    alert('Tổng tiền phải trả là: ' + bill + 'k');
+
+
+</script>
+</body>
+</html>

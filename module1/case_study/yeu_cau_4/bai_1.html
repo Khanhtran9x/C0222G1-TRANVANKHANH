@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script !src="">
+    let input = prompt('Nhập vào xâu kí tự cần chuẩn hóa');
+    let str = input.toLowerCase();
+    alert(str);
+    let arr = str.split(' ');
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        let str = arr[i];
+        let newStr = str.charAt(0).toUpperCase() + str.slice(1);
+        newArr.push(newStr);
+    }
+    for (let i = 0; i < newArr.length ; i++) {
+        if (newArr[i] === ' '){
+            newArr.slice(i);
+        }
+    }
+    let result = newArr.join(' ');
+    alert(result);
+
+</script>
+</body>
+</html>
