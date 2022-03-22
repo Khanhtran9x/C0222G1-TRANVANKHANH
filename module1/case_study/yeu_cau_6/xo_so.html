@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xổ số</title>
+</head>
+<body>
+<h2>Xổ số CodeGym</h2>
+<input type="text" style="width: 30px" id="pick1">
+<input type="text" style="width: 30px" id="pick2">
+<input type="text" style="width: 30px" id="pick3">
+<input type="text" style="width: 30px" id="pick4">
+<input type="text" style="width: 30px" id="pick5">
+<input type="text" style="width: 30px" id="pick6">
+<br>
+<br>
+<button onclick="buyTicket();">Mua vé</button>
+<button onclick="check();">Xem kết quả</button>
+<script>
+    const arrJackPot = ['12', '33', '01', '49', '28', '43'];
+    const arrJackPot2 = ['33', '01', '49', '28', '43'];
+    const arrJackPot3 = ['49', '28', '43'];
+
+
+    function buyTicket() {
+        let arrTicket = [];
+        let pick1 = document.getElementById('pick1').value;
+        let pick2 = document.getElementById('pick2').value;
+        let pick3 = document.getElementById('pick3').value;
+        let pick4 = document.getElementById('pick4').value;
+        let pick5 = document.getElementById('pick5').value;
+        let pick6 = document.getElementById('pick6').value;
+        arrTicket.push(pick1);
+        arrTicket.push(pick2);
+        arrTicket.push(pick3);
+        arrTicket.push(pick4);
+        arrTicket.push(pick5);
+        arrTicket.push(pick6);
+        alert('Bạn vừa đặt vé: ' + arrTicket);
+    }
+    function getTicket() {
+        let arrTicket = [];
+        let pick1 = document.getElementById('pick1').value;
+        let pick2 = document.getElementById('pick2').value;
+        let pick3 = document.getElementById('pick3').value;
+        let pick4 = document.getElementById('pick4').value;
+        let pick5 = document.getElementById('pick5').value;
+        let pick6 = document.getElementById('pick6').value;
+        arrTicket.push(pick1);
+        arrTicket.push(pick2);
+        arrTicket.push(pick3);
+        arrTicket.push(pick4);
+        arrTicket.push(pick5);
+        arrTicket.push(pick6);
+        return arrTicket;
+    }
+
+    function check() {
+        let arrTicket = getTicket();
+        let strTicket = arrTicket.join(' ');
+        let count = 0;
+        while (arrJackPot.length) {
+            let a = arrJackPot.shift();
+            if (strTicket.includes(a)) {
+                strTicket = strTicket.replace(a, '');
+                count++;
+            }
+        }
+        if (count === 6) {
+            alert('Chúc mừng bạn đã trúng giải nhất');
+        } else if (count === 5) {
+            console.log(count);
+            arrTicket.shift();
+            console.log(arrTicket);
+            let count2 = 0;
+            for (let i = 0; i < arrJackPot2.length; i++) {
+                if (arrJackPot2[i] === arrTicket[i]) {
+                    count2++;
+                }
+            }
+            if (count2 === 5) {
+                alert('Chúc mừng bạn đã trúng giải nhì');
+            }
+
+        } else if (count === 3) {
+            arrTicket.shift();
+            arrTicket.shift();
+            arrTicket.shift();
+            console.log(arrTicket);
+            let count3 = 0;
+            for (let i = 0; i < arrJackPot3.length; i++) {
+                if (arrJackPot3[i] === arrTicket[i]) {
+                    count3++;
+                }
+            }
+            if (count3 === 3) {
+                alert('Chúc mừng bạn đã trúng giải ba');
+            }
+
+        } else {
+            alert('Chúc bạn may mắn lần sau');
+        }
+    }
+
+    let input = parseInt(prompt('Bạn có 2 lựa chọn: \n 1. Bạn muốn tự chọn số. \n 2. Hệ thống tự chọn random'));
+    if (input === 2) {
+        let pick1 = Math.floor(Math.random() * 99);
+        let pick2 = Math.floor(Math.random() * 99);
+        let pick3 = Math.floor(Math.random() * 99);
+        let pick4 = Math.floor(Math.random() * 99);
+        let pick5 = Math.floor(Math.random() * 99);
+        let pick6 = Math.floor(Math.random() * 99);
+        if (pick2 === pick1) {
+            pick2 = pick2 + 1;
+        }
+        if (pick3 === pick2) {
+            pick3 = pick3 + 1;
+        }
+        if (pick4 === pick3) {
+            pick4 = pick4 + 1;
+        }
+        if (pick5 === pick4) {
+            pick5 = pick5 + 1;
+        }
+
+        if (pick6 === pick5) {
+            pick6 = pick6 + 1;
+        }
+
+        if (pick1 < 10) {
+            pick1 = '0' + pick1;
+        }
+        if (pick2 < 10) {
+            pick2 = '0' + pick2;
+        }
+        if (pick3 < 10) {
+            pick3 = '0' + pick3;
+        }
+        if (pick4 < 10) {
+            pick4 = '0' + pick4;
+        }
+        if (pick5 < 10) {
+            pick5 = '0' + pick5;
+        }
+        if (pick6 < 10) {
+            pick6 = '0' + pick6;
+        }
+        document.getElementById('pick1').value = pick1;
+        document.getElementById('pick2').value = pick2;
+        document.getElementById('pick3').value = pick3;
+        document.getElementById('pick4').value = pick4;
+        document.getElementById('pick5').value = pick5;
+        document.getElementById('pick6').value = pick6;
+    }
+</script>
+</body>
+</html>

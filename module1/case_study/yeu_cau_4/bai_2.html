@@ -7,16 +7,19 @@
 <body>
 <script !src="">
     function differentSymbolsNaive(s) {
-        let count = 1;
-        for (let i = 0; i < s.length; i++) {
-            if (s.charAt(i) !== s.charAt(i+1)){
-                count++;
+        let uniqLetters = [];
+        let strArr = str.split('');
+        for (let i = 0; i <strArr.length; i++) {
+            if (uniqLetters.includes(strArr[i]) === false){
+                uniqLetters.push(strArr[i]);
             }
         }
-        alert(count);
+        return uniqLetters.length;
     }
+
     let str = prompt('Nhập vào chuỗi cần kiểm tra');
-    differentSymbolsNaive(str);
+    alert(differentSymbolsNaive(str));
+
 </script>
 </body>
 </html>

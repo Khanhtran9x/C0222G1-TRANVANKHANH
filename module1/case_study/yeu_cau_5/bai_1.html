@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script !src="">
+    function evenTotal(){
+        let arr = [];
+        let m = parseInt(prompt('Nhập vào số phần tử theo phương ngang'));
+        let n = parseInt(prompt('Nhập vào số phần tử theo phương dọc'));
+        let total = 0;
+        for (let i = 0; i < n; i++) {
+            let arrx = [];
+            for (let j = 0; j < m; j++) {
+                let input = parseInt(prompt('Nhập vào giá trị của mảng'));
+                arrx.push(input);
+                if (input % 2 === 0) {
+                    total += input;
+                }
+            }
+            arr.push(arrx);
+        }
+        return total;
+    }
+    let result = evenTotal();
+    alert(result);
+</script>
+</body>
+</html>

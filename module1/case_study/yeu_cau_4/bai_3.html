@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    function commonCharacterCount(s1, s2) {
+        let count = 0;
+        let arrS1 = s1.split('');
+        let a;
+        while (arrS1.length) {
+            a = arrS1.shift();
+            if (s2.includes(a)) {
+                s2 = s2.replace(a, '');
+                count++;
+            }
+        }
+        return (count);
+    }
+
+    let s1 = prompt('Nhập vào chuỗi thứ nhất');
+    let s2 = prompt('Nhập vào chuỗi thứ hai');
+    let result = commonCharacterCount(s1, s2);
+    alert(result);
+</script>
+</body>
+</html>
