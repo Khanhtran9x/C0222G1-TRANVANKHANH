@@ -13,8 +13,14 @@
         while (arrS1.length) {
             a = arrS1.shift();
             if (s2.includes(a)) {
-                s2 = s2.replace(a, '');
-                count++;
+                for (let i = 0; i < s2.length ; i++) {
+                    if (s2.charAt(i) === a){
+                        s2 = s2.slice(i);
+                        count++;
+                        break;
+                    }
+                }
+
             }
         }
         return (count);

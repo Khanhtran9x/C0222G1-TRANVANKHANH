@@ -23,20 +23,8 @@
 
 
     function buyTicket() {
-        let arrTicket = [];
-        let pick1 = document.getElementById('pick1').value;
-        let pick2 = document.getElementById('pick2').value;
-        let pick3 = document.getElementById('pick3').value;
-        let pick4 = document.getElementById('pick4').value;
-        let pick5 = document.getElementById('pick5').value;
-        let pick6 = document.getElementById('pick6').value;
-        arrTicket.push(pick1);
-        arrTicket.push(pick2);
-        arrTicket.push(pick3);
-        arrTicket.push(pick4);
-        arrTicket.push(pick5);
-        arrTicket.push(pick6);
-        alert('Bạn vừa đặt vé: ' + arrTicket);
+        let a = getTicket();
+        alert('Bạn vừa đặt vé: ' + a);
     }
     function getTicket() {
         let arrTicket = [];
