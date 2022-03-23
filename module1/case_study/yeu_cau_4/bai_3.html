@@ -9,21 +9,19 @@
     function commonCharacterCount(s1, s2) {
         let count = 0;
         let arrS1 = s1.split('');
+        let arrS2 = s2.split('');
         let a;
         while (arrS1.length) {
             a = arrS1.shift();
-            if (s2.includes(a)) {
-                for (let i = 0; i < s2.length ; i++) {
-                    if (s2.charAt(i) === a){
-                        s2 = s2.slice(i);
-                        count++;
-                        break;
-                    }
+            for (let i = 0; i < arrS2.length; i++) {
+                if (arrS2[i] === a){
+                    arrS2.splice(i, 1);
+                    count++;
+                    break;
                 }
-
             }
         }
-        return (count);
+        return count;
     }
 
     let s1 = prompt('Nhập vào chuỗi thứ nhất');
